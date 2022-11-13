@@ -1,0 +1,36 @@
+.container {
+	width: 210mm;
+	height: 297mm;
+	font-family: 'Times New Roman', Times, serif;
+	padding: 50px;
+	border: 1px solid #000;
+}
+.horizontal-rule {
+	background-color: #000;
+	height: 1.5px;
+	width: 100%;
+	margin-top: 2px;
+}
+.component-container {
+	margin-top: 16px;
+}
+input {
+	font-size: 18px;
+	font-family: 'Times New Roman';
+}
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: square;
+}
+.double-aligned {
+	margin-bottom: 8px;
+	display: flex;
+	justify-content: space-between;
+}
+.double-aligned>input:last-child {
+	text-align: right;
+}
+.double-aligned:first-child>input {
+	font-weight: 700;
+}

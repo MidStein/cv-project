@@ -1,0 +1,12 @@
+.project-component {
+	margin-bottom: 24px;
+}
+.features {
+	margin-left: 16px;
+}
+li {
+	margin-bottom: 4px;
+}
+li>input {
+	width: 100%;
+}

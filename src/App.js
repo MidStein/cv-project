@@ -1,7 +1,7 @@
 import React from 'react';
-import GenInfoSec from './components/GenInfoSec'
-import EduExpSec from './components/EduExpSec'
-import PracExpSec from './components/PracExpSec'
+import GenInfoSec from './components/GenInfoSec';
+import EduExpSec from './components/EduExpSec';
+import PracExpSec from './components/PracExpSec';
 import './styles/App.css';
 
 class App extends React.Component {

@@ -12,11 +12,31 @@
 	margin-top: 2px;
 }
 .component-container {
-	margin-top: 16px;
+	margin-bottom: 16px;
+	position: relative;
+}
+button {
+	background-color: #60a5fa;
+	padding: 0;
+	border-color: #1d4ed8;
+	border-radius: 4px;
+	position: absolute;
+	top: -4px;
+	right: 0;
+	cursor: pointer;
+}
+img {
+	width: 20px;
+	height: 20px;
 }
 input {
 	font-size: 18px;
 	font-family: 'Times New Roman';
+	width: 250px;
+}
+input:disabled {
+	border: none;
+	color: #000;
 }
 ul {
 	padding: 0;

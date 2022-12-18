@@ -1,39 +1,33 @@
 import React from 'react';
 import '../styles/EduExpSec.css';
+import EduLevel from './EduLevel'
+import saveIcon from '../icons/save.svg';
+import editIcon from '../icons/edit.svg';
 
 class EduExpSec extends React.Component {
+	constructor() {
+		super()
+		this.state = {
+			editable: 'true',
+		}
+	}
+
+	changeState = () => {
+		this.setState((state) => ({
+			editable: !state.editable,				
+		}))
+	}
+	
 	render() {
 		return (
 			<div className='component-container'>
 				<div className='title'>EDUCATION</div>
 				<div className='horizontal-rule'></div>
-				<form>
-					<div className='double-aligned'>
-						<input 
-							type='text' 
-							name='education-institution' 
-							id='form-institution' 
-							placeholder='Institute of Education'
-						/>
-						<input type='text' 
-							name='graduation-date' 
-							id='form-date' 
-							placeholder='Month & Year of graduation'
-						/>
-					</div>
-					<div className='double-aligned'>
-						<input type='text' name='study-title' id='form-study-title' placeholder='Title of study'/>
-						<input 
-							type='text' 
-							name='institution-address' 
-							id='form-address' 
-							placeholder='Address of institution'
-						/>
-					</div>
-					<ul className='education-details'>
-						<li>CGPA: <input type='number' name='cgpa' id='form-cgpa' placeholder='1.00 - 10.00'/></li>
-					</ul>
-				</form>
+				<EduLevel scoreType={'cgpa'} editable={this.state.editable} />
+				<EduLevel scoreType={'percentage'} editable={this.state.editable} />
+				<button type='button' onClick={this.changeState}>
+					{this.state.editable ? <img src={saveIcon} alt='Save' /> : <img src={editIcon} alt='Edit' />}
+				</button>
 			</div>
 		);
 	}

@@ -1,11 +1,9 @@
 import React from 'react';
 import '../styles/Project.css';
 
-class Project extends React.Component {
-	render() {
-		const { editable } = this.props;
-		return (
-			<form className='project-component'>
+const Project = ({ editable }) => {
+	return (
+		<form className='project-component'>
 				<div className='double-aligned'>
 					<input 
 						type='text' 
@@ -55,8 +53,7 @@ class Project extends React.Component {
 					</li>
 				</ul>
 			</form>
-		);
-	}
+	)
 }
 
 export default Project;
